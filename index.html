@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <title>SuprDaily</title>
+</head>
+<body onload="init()">
+    <div class="container" id="main-container">
+        <div id="header">
+            <img src="res/suprdaily.png" alt=""><h1>SuprDaily</h1>
+        </div>
+        <div id="mainToolBar">
+            <input type="button" value="Add Row" class="btn" onclick="addRow()">
+        </div>
+
+        <div class="container" id="board">
+        </div>
+        
+        <div id="myModal" class="modal">
+            <div class="modal-content" id="rowData">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <label for="rowTitle">Enter title for the column</label>
+              <input id="rowTitle" type="text">
+              <input type="button" class="btn" value="Submit" onclick="createRow()">
+            </div>
+            <div class="modal-content" id="cardData">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <label for="cardTitle">Enter title for the card</label>
+                <input id="cardTitle" type="text">
+                <br>
+                <label for="cardText">Content:</label>
+                <textarea id="cardText"rows="4" cols="50"></textarea>
+                <input type="button" class="btn" value="Submit" onclick="createCard()">
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
